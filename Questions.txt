@@ -1,0 +1,34 @@
+Answers to Questions:
+
+What did you learn about the server?
+- POSTing images to the server with AJAX
+- storing binary documents with properties
+- using the url rewriter
+- retrieving images using a separate XQuery file
+- basic search functionality
+
+What did you like about MarkLogic Server?
+- Setting up a URL rerouter was easy since all I needed to do was specifiy a file name
+- Like using the unquote function for the most part since I could send data in the form of XML for AJAX requests and then iterate through it on the server
+	- Had a few problems as well
+- Liked being able to make directories in the server to store documents
+	- This felt like a logical way to organize information
+
+What did you not like about the server?
+- This is more of an XML issue, but ran into problems when I tried to send strings embedded in XML with non-alpha numeric values
+	- When the unquote function is called, it complained about these chacters, so I had to send them as a separate parameter that could not be variable length
+- Felt that CQ could be improved quite a bit but perhaps lots of these changes are coming with Cydonia
+	- It would be nice to have some ways to modify documents in the UI
+		- Add XML, modify existing elements, etc.
+		- Add, remove documents through UI instead of XQuery
+		- Function auto-complete plus real-time evaluation to find errors
+- Some error messages were vague
+	- If missing a return statement in FLWOR expression, it complained about a QName
+- More of an XQuery issue, but I didn't find an easy way to maintain state between for loop iterations
+	- Checking to see if something had been encountered
+- Found it odd in the cts search that fn:doc() was used to specify the scope when it is used differently elsewhere
+- Was expecting my search queries to only return the elements that matched but got back the whole document
+	- Good in one case since I needed to access other fields
+	- Bad in another since it made it feel like I was searching twice and needed to filter out all nodes from the result set
+- Was expecting the search api to search through document properties and attributes along with XML documents
+	- Was expecting this given that the api seems very vague
