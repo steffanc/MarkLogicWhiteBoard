@@ -1,0 +1,51 @@
+INFO
+
+MarkLogic Whiteboard is a real-time text and image whiteboard that is
+infinitely scrollable. You can drag and drop images from your desktop to the
+browser and have them appear immediately. These pictures will be seen by all
+viewing the same whiteboard page. The pictures can then be dragged infinitely
+around the page and this will display in real-time to others.
+
+Text can be put on the page by double clicking on a blank spot in the page and
+then beginning to type. Text can be modified by double clicking on the text
+again.
+
+MarkLogic Whiteboard allows you to create your own whiteboards and search
+on the content of each whiteboard. In order to create your own whiteboard just
+add some letters to the end of the url.
+
+Ex: http://localhost:8011/test
+
+This project was inspired by www.yourworldoftext.com.
+
+
+SETUP
+
+In order to get this project up and running:
+
+1) Head to http://developer.marklogic.com/products
+2) Download the version of the server of your choice
+3) Checkout the code from the git repository
+4) Start up MarkLogic Server and navigate to the admin UI at
+http://localhost/8001
+5) Create a new app-server as follows:
+Groups->Default->App Servers->Create HTTP
+6) 
+i) Enter a server name
+ii) Set the root to the root dir of the project you checked out
+
+Ex: /space/github/MarkLogicWhiteBoard
+
+iii) Set the port to something easy to remember such as 8011
+iv) Set the url writer to be create-page.xqy (this allows for creating new
+whiteboards)
+
+7) Open Firefox and browse to http://localhost/8011
+8) Drag and drop image files from your desktop and watch them appearch
+instantaneously on all browsers pointed at the same url.
+
+
+NOTES
+
+- currently only fully works with Firefox
+- drag and drop currently only fully works from desktop, not webpages
